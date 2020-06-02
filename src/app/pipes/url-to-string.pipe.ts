@@ -11,7 +11,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class UrlToStringPipe implements PipeTransform {
 
   transform(url: string): any {
-    url = decodeURIComponent(url);
     const urlSubstrings: string[] = url.slice(1).split('/');
     const stringRepresentation =
       urlSubstrings
